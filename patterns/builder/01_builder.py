@@ -25,6 +25,6 @@ class ImplantBuilder:
         return self
 
     def build(self) -> CyberImplant:
-        if not self.cyber_implant.model or not self.cyber_implant.material:
+        if self.cyber_implant.model is None or self.cyber_implant.material is None:
             raise ValueError('Модель или материал не заданы')
         return self.cyber_implant
